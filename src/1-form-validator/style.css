@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --common-letter-color: #3f3b3b;
+    --nice-color: #482ff7;
+    --success-color: #83e85a;
+    --error-color: #ff304f;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffff;
+    border-radius: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+.form {
+    padding: 30px 40px;    
+}
+
+.form h2 {
+    color:  var(--common-letter-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    position: relative;
+    left: 2px;
+    color: var(--common-letter-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    border: 2px solid #b1b1b1;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.form-group input:focus {
+    outline: 0;
+    border-color: var(--nice-color);
+}
+
+.form-group.success input {
+    border-color: var(--success-color);   
+} 
+
+.form-group.error input {
+    border-color: var(--error-color);
+}
+
+.form-group small {
+    position: absolute;
+    left: 2px;
+    bottom: 0;
+    visibility: hidden;
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.form-group.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: var(--nice-color);
+    border: none;
+    border-radius: 4px;
+    color: #ffff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+}
